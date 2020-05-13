@@ -1,0 +1,312 @@
+@charset "UTF-8";
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*---------------------end of style reset-----------------------*/
+
+ 
+ footer { 
+  font-family:'Major Mono Display', monospace;
+  text-align: center; 
+  color: white; 
+  margin-top: 840px; 
+}
+
+#copyright { 
+  font-size: 10px; 
+  margin-top: 5px; 
+}
+
+/*---------------header---------------*/ 
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	background-color: #111111; 
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.screen-reader-text {
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+
+/*----------- navigation ----------*/
+nav {
+    background: #111111;
+    color: white;
+    left: 0;
+    position: relative; 
+    top: -9px;
+    width: 100%;
+	height: 60px; 
+    z-index: 9999;
+}
+
+/*** INPUT ***/
+nav input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/*** CODED ***/
+
+nav label {
+    cursor: pointer;
+    position: relative;
+	top: 35px;
+	left: 60px;
+    font-family: 'Major Mono Display', monospace;
+	font-size: 30px;
+    padding: 10px;
+	color: white;
+}
+
+/* Hamburger Icon */
+#menu-icon,
+#menu-icon:before,
+#menu-icon:after {
+    background: #FFFFFF;
+    border-radius: 4px;
+    height: 4px;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+#menu-icon {
+    display: inline-block;
+    max-width: 32px;
+    position: relative;
+	top: 20px;
+	right: 120px;
+}
+
+nav label #menu-icon {
+    float: right;
+}
+
+#menu-icon:before,
+#menu-icon:after {
+    content: '';
+    left: 0;
+    position: absolute;
+}
+
+#menu-icon:before {
+    top: -10px;
+}
+
+#menu-icon:after {
+    bottom: -10px; 
+}
+
+/* Close Icon */
+nav input[type=checkbox]:checked + label #menu-icon {
+    background: transparent;
+}
+
+nav input[type=checkbox]:checked + label #menu-icon:before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+nav input[type=checkbox]:checked + label #menu-icon:after {
+    bottom: 0;
+    transform: rotate(45deg);  
+}
+
+/*** MENU ***/
+
+/* Overlay */
+nav input:checked ~ #overlay {
+    background: #111111;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+/* List */
+nav ul {
+    font-size: 50px;
+    list-style: none;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+
+nav input:checked ~ ul {
+    margin: 350px;
+    max-height: inherit;
+    opacity: 1;
+}
+
+nav ul > li {
+    margin: 10px 40px;
+	display: inline-block;  
+	
+}
+
+nav ul a {
+    color: white !important;
+    text-decoration: none;
+	font-family:'Major Mono Display', monospace;
+	
+}
+
+nav ul a:hover {
+    text-decoration: underline;
+}
+
+
+/*--------------about-------------*/
+
+.contai { 
+	position: absolute; 
+	display: inline-block; 
+	background-image: url(rec.png);
+	background-repeat: no-repeat;
+	background-size: 900px 500px; 
+	background-position: center; 
+	margin-top: 100px;  
+}
+
+#about{ 
+  font-family: 'Major Mono Display', monospace; 
+  color: white; 
+  font-size: 60px;
+  text-align: center; 
+  margin-top: 100px; 
+  margin-bottom: -100px;
+}
+
+#par{ 
+  font-family: "Helvetica Neue", "sans-serif";
+  color: white; 
+  font-size: 36px; 
+  text-align: center;
+  text-align: justify; 
+  margin: 150px; 
+  word-spacing: -5px; 
+  letter-spacing: 3px; 
+  line-height: 45px; 
+}
+
+.box {
+	margin-right: 200px; 
+	margin-left: 200px; 
+}
+
+/* --- Media Quieries ---*/ 
+ 
+
+@media screen and (max-width: 800px) {
+	#menu-icon { position: relative; right: 55px;  }
+	nav label {position: relative; left: 30px; }
+	.contai {
+		position: relative; 
+		left: -330px; 
+		background-position: top; 
+		background-size: 800px 500px; 
+	}
+	
+	#par { 
+		font-size: 25px; 
+		word-spacing: -4px;  
+		line-height: 30px;
+	}
+	
+	.box { width: 880px; }
+	
+	footer { margin-top: 155px; }
+	
+	nav ul { font-size: 30px; 
+		display: relative; 
+		left: -1000px; 
+		overflow: visible; 
+	}
+	
+	nav input:checked ~ ul {
+    	margin: 150px;
+		margin-top: 300px; 
+	
+    }
+	
+}
+ 
+ 
+  
+/* ---- END MEDIA ---*/
